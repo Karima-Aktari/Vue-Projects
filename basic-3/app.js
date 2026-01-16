@@ -5,7 +5,7 @@
 const app = Vue.createApp({
   data() {
     return {
-      counter: 0,
+      counter: 10,
       name: "",
       confirmedName: "",
     };
@@ -22,7 +22,8 @@ const app = Vue.createApp({
     //   this.name = this.name;
     // },????
     setName(event, lastName) {
-      this.name = event.target.value + " " + lastName;
+      this.name = event.target.value;
+      // this.name = event.target.value + " " + lastName;
     },
     add(num) {
       this.counter = this.counter + num;
@@ -36,6 +37,9 @@ const app = Vue.createApp({
       this.counter = this.counter - num;
       // this.counter = this.counter - 1;  ///without num parameter
       // this.counter--;
+    },
+    resetInput() {
+      this.name = "";
     },
   },
 });
