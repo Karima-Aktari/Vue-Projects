@@ -7,11 +7,21 @@ const app = Vue.createApp({
     return {
       counter: 10,
       name: "",
-      confirmedName: "",
+      // confirmedName: "",
     };
+  },
+  computed: {
+    fullname() {
+      console.log("Running Again");
+      if (this.name === "") {
+        return "";
+      }
+      return this.name + " " + "Aktari";
+    },
   },
   methods: {
     outputFullname() {
+      console.log("Running Again");
       if (this.name === "") {
         return "";
       }

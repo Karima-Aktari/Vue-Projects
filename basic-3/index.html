@@ -47,7 +47,8 @@
       <!-- Note:- v-bind, v-on == v-model -->
       <input type="text" v-model="name" />
       <button v-on:click="resetInput">Reset Input</button>
-      <p>Your Name:{{outputFullname ()}}</p>
+      <p>Your Name:{{ fullname }}</p>
+      <!-- <p>Your Name:{{outputFullname ()}}</p> -->
       <!-- <p>Your Name:{{name}}</p> -->
       <!-- <p>Confirm Your Name:{{confirmedName}}</p> -->
       <form v-on:submit.prevent="submitForm">
